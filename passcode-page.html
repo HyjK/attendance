@@ -2,7 +2,7 @@
 <html class="staticrypt-html">
 <head>
     <meta charset="utf-8">
-    <title>월드행복비전교회 예상 및 실제출결</title>
+    <title>월드행복비전교회 실제출결</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- do not cache this page -->
@@ -117,8 +117,10 @@
 <div class="staticrypt-page">
     <div class="staticrypt-form">
         <div class="staticrypt-instructions">
-            <p class="staticrypt-title">월드행복비전교회 예상 및 실제출결</p>
-            <p><p>비밀번호를 입력해주세요! 과, 조장님, 출결팀장님께서는 김혜진B 간사에게 문의하실 수 있습니다!^^</p>
+            <p class="staticrypt-title">월드행복비전교회 실제출결</p>
+            <p><p>비밀번호는 김혜진B 간사에게 문의하세요!</p>
+
+<p>(또는 조장출결방 참조)</p>
 </p>
         </div>
 
@@ -6165,13 +6167,13 @@
         e.preventDefault();
 
         var passphrase = document.getElementById('staticrypt-password').value,
-            encryptedMsg = 'cab30c787606ad6789ddd98a6978d739f117e5cdcefa8c793c93107e4447b592339db5bb4119277f5d986253bf48ab905e8aeed4b05a2eec556a2115520556497Dg2XrHhNHVY/2flafJYXVVcu3Xsf24EaUvooMTzaNB7d70QxD2LTUEo9gjRwdyKgjCG3TFNisVrafaKuo3anYlD0fREf80atnSdEXM+IrEEwqtEfxAs4roFvHOe/S8tK/wRZc8BYsDQDQcB+3nTSCmYNOQ9v30Kyx7T2E/yIH1MD86jlUhJ/ivLfeW6lDf2vMH1AJ5jQ4O4YeLnXm9pWemeqxPvf4vid3eNvmv9ApOWdMZNYu3GnrrXZQGtfITGeRPtxs6YNuBSHCkY+FYsg86GjzwPMMGmW4zP1TyEQP/P64AtY5TUdax5PaMUcwQjzy77owAZpUdCdXaUhVXHDQXzn2jEwqt3KJMLDDHGU+Ymx6aELiwLBjyv/34DYXCSlWGPYTrC1KT1JtMDaPQCEwoCz/pV6sCApWh5MXV3eoVs3ZdF9zyKJ+SIsJ0mzlOgkg6PqL4qz0lemqIZ75JqmVC5u0L3JV5pnju0HqeTljgWB/4R32JhAiIJiKqP3IHl',
+            encryptedMsg = '321ee09f660087f2c11aace44280f68c1997da69d4c5376a123a63c4e82dfd5531eaf81bc42b0d7e6f4d814c5da4d6d5d25e9572335bad2ab7b7abccc8bc202douYNM1N7E/Dwga6Ikq2/Owzvou4JVxaavgPVc31AtwUpdhxPYY/P412keehLPe1LY9KVp12V/VBj2ZM4O/SC7aIK/ajtDBsMVxUiEtGejNsw1UFqx4cMcsGR7NTI1NFlbG/B4mi5UlMYgMANmDZZf806vFqU3xUlqgmq4kbIWfdXhvvLOPaGzXoBaosUkX15gEDISx0HHMsJVERUh8UIvqbBZPZtbSVH2SL7mDpNuG5IWLHrpoLKHC8OdE6iJZvR0GWb6yqpOiJnQ8IpQLsOoY79qy+Y6TygKLXRQlPOD2o=',
             encryptedHMAC = encryptedMsg.substring(0, 64),
             encryptedHTML = encryptedMsg.substring(64),
             decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
         if (decryptedHMAC !== encryptedHMAC) {
-            alert('비밀번호를 잘못 입력하셨습니다!');
+            alert('비밀번호를 다시 입력해주세요!');
             return;
         }
 
