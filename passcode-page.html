@@ -6165,13 +6165,13 @@
         e.preventDefault();
 
         var passphrase = document.getElementById('staticrypt-password').value,
-            encryptedMsg = 'c7e88deb9965ee50feb37eb7084ed42a8fa035d453c7c5188866d1f857b8f8c79ffc18939f0751b398f2d6af3841181a4a98fbb3b66acb855e6ab1a6b5cf24a8AENv2s0ELfwUq6lDmwUg4gCONoxLZrCBVxdgSrxu+go8sV/VTxGe6n8b8oMRvRtPvDZgErd+ikNgTzo8O7pAliTlZmkJImsRMJK3kEk1yHGze21W4iue8x5rMpwHZCPvwGSLSupQwTgyydgYEfyJPs9odP+Okc8l7yWOyZZN5JDE14uF+r5dQL/ZvJmqhOvhn1xaJc9vYCkfZsuu8EJc6ib6YpUiaIxrIfEyKAEJl+vhE49IFeDBag2fuelzmPM/WTpj80/6GEDMrIoO5cXx9+IzhIkNzGnW4sDOEXugikOp68z08MkcOkiBCPtoUFqqOjL50aztgA5MLoAGJxlom6TpwBDGw/k5ZUis0DzqHK/Xho277USBlZh2lU7dBqp2cObacOy1dxsAXUgu4FUNEHC8e2U/Rf2X8zosz+p/uIASJODEO7IVWxZJhJCCWI1HzPYqyFSxlYZrsd7kKuD3oeF7Xa2DcFyHwUNgvhdwTL3uaGNQEQF3YVJhr1Jz8M8z',
+            encryptedMsg = 'cab30c787606ad6789ddd98a6978d739f117e5cdcefa8c793c93107e4447b592339db5bb4119277f5d986253bf48ab905e8aeed4b05a2eec556a2115520556497Dg2XrHhNHVY/2flafJYXVVcu3Xsf24EaUvooMTzaNB7d70QxD2LTUEo9gjRwdyKgjCG3TFNisVrafaKuo3anYlD0fREf80atnSdEXM+IrEEwqtEfxAs4roFvHOe/S8tK/wRZc8BYsDQDQcB+3nTSCmYNOQ9v30Kyx7T2E/yIH1MD86jlUhJ/ivLfeW6lDf2vMH1AJ5jQ4O4YeLnXm9pWemeqxPvf4vid3eNvmv9ApOWdMZNYu3GnrrXZQGtfITGeRPtxs6YNuBSHCkY+FYsg86GjzwPMMGmW4zP1TyEQP/P64AtY5TUdax5PaMUcwQjzy77owAZpUdCdXaUhVXHDQXzn2jEwqt3KJMLDDHGU+Ymx6aELiwLBjyv/34DYXCSlWGPYTrC1KT1JtMDaPQCEwoCz/pV6sCApWh5MXV3eoVs3ZdF9zyKJ+SIsJ0mzlOgkg6PqL4qz0lemqIZ75JqmVC5u0L3JV5pnju0HqeTljgWB/4R32JhAiIJiKqP3IHl',
             encryptedHMAC = encryptedMsg.substring(0, 64),
             encryptedHTML = encryptedMsg.substring(64),
             decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
         if (decryptedHMAC !== encryptedHMAC) {
-            alert('Bad passphrase!');
+            alert('비밀번호를 잘못 입력하셨습니다!');
             return;
         }
 
