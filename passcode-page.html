@@ -119,8 +119,6 @@
         <div class="staticrypt-instructions">
             <p class="staticrypt-title">월드행복비전교회 실제출결</p>
             <p><p>비밀번호는 김혜진B 간사에게 문의하세요!</p>
-
-<p>(또는 조장출결방 참조)</p>
 </p>
         </div>
 
@@ -6167,13 +6165,13 @@
         e.preventDefault();
 
         var passphrase = document.getElementById('staticrypt-password').value,
-            encryptedMsg = '321ee09f660087f2c11aace44280f68c1997da69d4c5376a123a63c4e82dfd5531eaf81bc42b0d7e6f4d814c5da4d6d5d25e9572335bad2ab7b7abccc8bc202douYNM1N7E/Dwga6Ikq2/Owzvou4JVxaavgPVc31AtwUpdhxPYY/P412keehLPe1LY9KVp12V/VBj2ZM4O/SC7aIK/ajtDBsMVxUiEtGejNsw1UFqx4cMcsGR7NTI1NFlbG/B4mi5UlMYgMANmDZZf806vFqU3xUlqgmq4kbIWfdXhvvLOPaGzXoBaosUkX15gEDISx0HHMsJVERUh8UIvqbBZPZtbSVH2SL7mDpNuG5IWLHrpoLKHC8OdE6iJZvR0GWb6yqpOiJnQ8IpQLsOoY79qy+Y6TygKLXRQlPOD2o=',
+            encryptedMsg = '04b99964c5779f590d64a868146580df97db16e5537ab69dd61379ddd6e76077a84db836403b6aa7c267e0dab9edd1e95c9dd492a4a6dc113868095f342911bbXw1gekC0ise2CET9Rwy6//HIgygGpEzOy2PcMXlA35rWSpZ+dF6h5o4kqB9NY7jKPRB4cdXdhFqR96KMaWpzlPirYL/dMTqeZuqO3D9mPjjHfkLx9pnz14415ukzvuKvMhpaEyJbd1J8CDJI2WJQbdxCqzsqzev1M4ulGu1wM4RvvjrDYnI05GFJAuH4cWTb8+pvKFTsnGX5GiAjRuacQwXgvHXpIRInC0nj1tp8uZV+cvS/Tm3JHhR+Y4clR1yIRMAXxnS17XqieHZemPfa4+Co3dQoziMfWvYOQDAImS0=',
             encryptedHMAC = encryptedMsg.substring(0, 64),
             encryptedHTML = encryptedMsg.substring(64),
             decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
         if (decryptedHMAC !== encryptedHMAC) {
-            alert('비밀번호를 다시 입력해주세요!');
+            alert('Bad passphrase!');
             return;
         }
 
